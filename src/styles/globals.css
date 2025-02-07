@@ -3,22 +3,10 @@
 @tailwind utilities;
 
 body {
-  background: #f8f9fa;
-  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-header {
-  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+.dark body {
+  background-color: #121212;
   color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 22px;
-}
-
-button {
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  transform: translateY(-2px);
 }
