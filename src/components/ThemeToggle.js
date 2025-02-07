@@ -3,7 +3,9 @@ import { useTheme } from "../context/ThemeContext";
 import { Switch } from "@headlessui/react";
 
 export default function ThemeToggle() {
-  const { darkMode, setDarkMode } = useTheme();
+  const { darkMode, setDarkMode, mounted } = useTheme();
+
+  if (!mounted) return null; // Avoid hydration error by not rendering before mount
 
   return (
     <div className="flex items-center space-x-2">
